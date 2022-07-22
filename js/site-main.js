@@ -1,6 +1,8 @@
 let skills_section = document.querySelector('.skills'),
     span_progress = document.querySelectorAll('.progress span'),
-    nav_link = document.querySelectorAll('.navbar-nav .nav-link');
+    nav_link = document.querySelectorAll('.navbar-nav .nav-link'),
+    navbar_collapse = document.querySelector('.collapse');
+    
 
 
 window.onscroll = function () {
@@ -19,6 +21,7 @@ window.onscroll = function () {
 nav_link.forEach((link) => {
     link.addEventListener('click', () => {
         removeClassActive();
+        // navbar_collapse.classList.toggle('show');
         link.classList.add('active');
     });
 });
@@ -42,11 +45,11 @@ ScrollReveal({
 
 ScrollReveal().reveal('.info-content', { origin: 'top' });
 
-ScrollReveal().reveal('.personal-info', { origin: 'right' });
+ScrollReveal().reveal('.personal-info', { origin: 'bottom' });
 
 ScrollReveal().reveal('.contact-info', { origin: 'bottom' });
 
-ScrollReveal().reveal('.contact-form', { origin: 'right' });
+ScrollReveal().reveal('.contact-form', { origin: 'top' });
 
 
 let services_projects = ScrollReveal({
@@ -56,8 +59,8 @@ let services_projects = ScrollReveal({
     // delay: 200
 });
 
-services_projects.reveal('.services .col-lg-4', { origin: 'right' });
-services_projects.reveal('.projects .col-md-4', { origin: 'left' });
+services_projects.reveal('.services .col-lg-4', { origin: 'top' });
+services_projects.reveal('.projects .col-md-4', { origin: 'bottom' });
 
 let skills = ScrollReveal({
     reset: true,
